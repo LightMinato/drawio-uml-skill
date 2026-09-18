@@ -1,0 +1,6 @@
+interface:
+  display_name: "Draw.io UML"
+  short_description: "Design and tidy clear, editable UML diagrams"
+  default_prompt: "Use $drawio-uml to create or tidy an editable UML diagram with clear layout and clean connectors."
+policy:
+  allow_implicit_invocation: false
