@@ -1,0 +1,25 @@
+{
+  "page": 1,
+  "counts": {
+    "source_shapes": 3,
+    "measured_shapes": 3,
+    "source_connectors": 7,
+    "measured_connectors": 7
+  },
+  "errors": [],
+  "incomplete": [],
+  "warnings": [
+    "HTML label bounds are not measured; inspect label overlap, clipping and endpoint text visually",
+    "charge/gateway-life: connector spacing 8.1px",
+    "confirm/ui-life: connector spacing 2.2px",
+    "receipt/service-life: connector spacing 2.2px",
+    "service-life/submit: connector spacing 8.1px"
+  ],
+  "crossings": [],
+  "overlapping_routes": [],
+  "through_shape": [],
+  "node_overlap": [],
+  "status": "CHECKS_PASSED",
+  "exit_code": 0,
+  "scope": "Supported geometry only; UML semantics and HTML typography require review."
+}

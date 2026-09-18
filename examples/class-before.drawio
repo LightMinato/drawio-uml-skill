@@ -1,0 +1,56 @@
+<mxfile host="drawio-uml">
+  <diagram id="uml-page" name="Order domain">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1100" pageHeight="760">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="customer" value="&lt;table style=&quot;border-collapse:collapse;width:100%;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;text-align:center;padding:6px;&quot;&gt;&lt;b&gt;Customer&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;+ id: UUID&lt;br/&gt;+ name: String&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;+ placeOrder(): Order&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#172033;fontSize=15;fontFamily=Helvetica;spacing=10;spacing=0;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="70" y="170" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="order" value="&lt;table style=&quot;border-collapse:collapse;width:100%;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;text-align:center;padding:6px;&quot;&gt;&lt;b&gt;Order&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;+ id: UUID&lt;br/&gt;+ total: Money&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;+ submit()&lt;br/&gt;+ cancel()&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#172033;fontSize=15;fontFamily=Helvetica;spacing=10;spacing=0;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="380" y="350" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="item" value="&lt;table style=&quot;border-collapse:collapse;width:100%;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;text-align:center;padding:6px;&quot;&gt;&lt;b&gt;OrderItem&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;+ quantity: int&lt;br/&gt;+ unitPrice: Money&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;+ subtotal(): Money&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#172033;fontSize=15;fontFamily=Helvetica;spacing=10;spacing=0;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="payment" value="&lt;table style=&quot;border-collapse:collapse;width:100%;&quot;&gt;&lt;tr&gt;&lt;td style=&quot;text-align:center;padding:6px;&quot;&gt;«interface»&lt;br/&gt;&lt;b&gt;PaymentGateway&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border-top:1px solid #94A3B8;text-align:left;padding:6px;&quot;&gt;+ charge(total: Money): Receipt&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#172033;fontSize=15;fontFamily=Helvetica;spacing=10;spacing=0;fillColor=#EFF6FF;" vertex="1" parent="1">
+          <mxGeometry x="340" y="120" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="places" value="places" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="customer" target="order">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="250" />
+              <mxPoint x="650" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="customer-one" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;labelBackgroundColor=#FFFFFF;" vertex="1" parent="places" connectable="0">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry">
+            <mxPoint x="-10" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="orders-many" value="0..*" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;labelBackgroundColor=#FFFFFF;" vertex="1" parent="places" connectable="0">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry">
+            <mxPoint x="10" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="contains" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=diamond;startFill=1;endArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="order" target="item">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="order-one" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;labelBackgroundColor=#FFFFFF;" vertex="1" parent="contains" connectable="0">
+          <mxGeometry x="-0.8" y="0" relative="1" as="geometry">
+            <mxPoint x="-10" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="items-many" value="1..*" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;labelBackgroundColor=#FFFFFF;" vertex="1" parent="contains" connectable="0">
+          <mxGeometry x="0.8" y="0" relative="1" as="geometry">
+            <mxPoint x="10" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uses" value="«use»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="order" target="payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

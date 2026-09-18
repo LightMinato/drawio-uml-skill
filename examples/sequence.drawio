@@ -1,0 +1,61 @@
+<mxfile host="drawio-uml">
+  <diagram id="uml-page" name="Checkout sequence">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1000" pageHeight="650">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ui" value="Checkout UI" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#172033;fontSize=15;fontFamily=Helvetica;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ui-life" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=none;edgeStyle=none;dashed=1;strokeColor=#94A3B8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="115" as="sourcePoint" />
+            <mxPoint x="180" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service" value="Order service" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#172033;fontSize=15;fontFamily=Helvetica;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="390" y="60" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="service-life" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=none;edgeStyle=none;dashed=1;strokeColor=#94A3B8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="115" as="sourcePoint" />
+            <mxPoint x="490" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gateway" value="Payment gateway" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#172033;fontSize=15;fontFamily=Helvetica;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="700" y="60" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway-life" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=none;edgeStyle=none;dashed=1;strokeColor=#94A3B8;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="800" y="115" as="sourcePoint" />
+            <mxPoint x="800" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="submit" value="1: submit(order)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=block;endFill=1;edgeStyle=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="190" as="sourcePoint" />
+            <mxPoint x="490" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="charge" value="2: charge(total)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=block;endFill=1;edgeStyle=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="280" as="sourcePoint" />
+            <mxPoint x="800" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="receipt" value="3: receipt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=open;endFill=0;dashed=1;edgeStyle=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="800" y="370" as="sourcePoint" />
+            <mxPoint x="490" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="confirm" value="4: confirmation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#475569;fontColor=#334155;fontSize=13;labelBackgroundColor=#FFFFFF;startArrow=none;endArrow=open;endFill=0;dashed=1;edgeStyle=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="460" as="sourcePoint" />
+            <mxPoint x="180" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,36 @@
+{
+  "page": 1,
+  "counts": {
+    "source_shapes": 4,
+    "measured_shapes": 4,
+    "source_connectors": 3,
+    "measured_connectors": 3
+  },
+  "errors": [],
+  "incomplete": [],
+  "warnings": [
+    "HTML label bounds are not measured; inspect label overlap, clipping and endpoint text visually"
+  ],
+  "crossings": [
+    [
+      "places",
+      "uses"
+    ]
+  ],
+  "overlapping_routes": [
+    [
+      "contains",
+      "places"
+    ]
+  ],
+  "through_shape": [
+    {
+      "edge": "places",
+      "shape": "payment"
+    }
+  ],
+  "node_overlap": [],
+  "status": "FAIL",
+  "exit_code": 1,
+  "scope": "Supported geometry only; UML semantics and HTML typography require review."
+}
